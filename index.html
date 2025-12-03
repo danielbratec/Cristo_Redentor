@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cristo Redentor</title>
+  <meta name="description" content="Site sobre o Cristo Redentor: história, curiosidades, galeria e como visitar.">
+  <style>
+    /* Reset simples */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.4;color:#222}
+
+    /* Layout */
+    header{background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.15)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtu709igvghAddck6bQl5ZMA0SskA6M9JLUg&s') center/cover no-repeat;color:white;padding:4rem 1rem}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;font-size:1.25rem}
+    .menu{display:flex;gap:.75rem}
+    .menu a{color:inherit;text-decoration:none;padding:.25rem .5rem;border-radius:6px}
+    .menu a:hover{background:rgba(255,255,255,0.08)}
+    .hero-title{font-size:clamp(1.8rem,4vw,3.2rem);margin-top:1.5rem}
+    .hero-sub{opacity:.9;margin-top:.5rem}
+
+    main{padding:2rem 1rem}
+    .grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+    @media(min-width:900px){.grid{grid-template-columns:2fr 1fr}}
+
+    .card{background:white;border-radius:12px;padding:1rem;box-shadow:0 6px 18px rgba(9,30,66,0.06)}
+    h2{margin-bottom:.75rem}
+    p{margin-bottom:.75rem}
+
+    /* Galeria */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px;cursor:pointer}
+    @media(min-width:600px){.gallery img{height:140px}}
+
+    /* Footer */
+    footer{padding:1rem;text-align:center;color:#666}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);visibility:hidden;opacity:0;transition:opacity .2s}
+    .lightbox.open{visibility:visible;opacity:1}
+    .lightbox img{max-width:95%;max-height:85%;border-radius:8px}
+    .btn{display:inline-block;padding:.5rem .75rem;border-radius:8px;border:0;background:#0b72ff;color:white;cursor:pointer}
+
+    /* Small helpers */
+    .muted{color:#666;font-size:.95rem}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+    .tag{background:#eef6ff;padding:.25rem .5rem;border-radius:999px;font-size:.85rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Cristo Redentor</div>
+        <div class="menu">
+          <a href="#sobre">Sobre</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#visitar">Visitar</a>
+        </div>
+      </nav>
+      <h1 class="hero-title">Cristo Redentor — símbolo do Rio de Janeiro</h1>
+      <p class="hero-sub">Uma página simples com história, galeria e dicas para visitantes.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+
+      <section class="card" id="sobre">
+        <h2>Sobre o Cristo Redentor</h2>
+        <p>O Cristo Redentor (Cristo Redentor) é uma estátua icônica localizada no topo do Morro do Corcovado, no Rio de Janeiro. Aqui você pode colocar um breve resumo histórico, dados sobre altura, inauguração, autores e curiosidades.</p>
+        <p class="muted">Dica: substitua este texto por conteúdo pesquisado e com fontes.</p>
+
+        <h3>Curiosidades</h3>
+        <ul>
+          <li>Estilo Art Déco.</li>
+          <li>Esculpido em pedra-sabão e concreto armado.</li>
+          <li>Uma das Novas Sete Maravilhas do Mundo Moderno.</li>
+        </ul>
+      </section>
+
+      <aside class="card" id="visitar">
+        <h2>Como visitar</h2>
+        <p>Informações úteis para planejar a visita: horários, bilhetes, transporte (trem do Corcovado, vans oficiais) e recomendações de segurança.</p>
+        <div class="tags">
+          <div class="tag">Trem do Corcovado</div>
+          <div class="tag">Van Oficial</div>
+          <div class="tag">Melhor horário: manhã</div>
+        </div>
+        <hr style="margin:.75rem 0">
+        <h3>Mapa rápido</h3>
+        <p class="muted">Você pode inserir um iframe do Google Maps ou Mapbox aqui para mostrar a localização.</p>
+      </aside>
+    </div>
+
+    <section class="card" id="galeria" style="margin-top:1rem">
+      <h2>Galeria</h2>
+      <div class="gallery" aria-hidden="false">
+        <!-- Troque os src por imagens reais (ex: imagens/galeria1.jpg) -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtu709igvghAddck6bQl5ZMA0SskA6M9JLUg&s" alt="Cristo Redentor vista frontal">
+        <img src="https://prefeitura.rio/wp-content/uploads/2021/10/Cristo-DePaula2-2-360x240.jpg" alt="Cristo Redentor de lado">
+        <img src="data:image/jpeg;base64,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" alt="Vista do Corcovado">
+        <img src="https://i.pinimg.com/736x/58/72/aa/5872aab68fca2ce7f82be6131891acde.jpg" alt="Pôr do sol no Cristo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjuKf2trSHTY0kydzAR4waJ5yDHmGAbx9-og&s" alt="A estátua e a cidade">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGIao2yWt-xeN4lqIIcxQ7cWIShz-NMVPUMA&s" alt="Detalhe do rosto do Cristo">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container muted">Feito com amor - ©Bratec Corporation</div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+    <button class="btn" id="closeBtn" style="position:absolute;top:20px;right:20px">Fechar</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    // JS simples para abrir a imagem em lightbox
+    const gallery = document.querySelector('.gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = lightbox.querySelector('img');
+    const closeBtn = document.getElementById('closeBtn');
+
+    gallery.addEventListener('click', e => {
+      const img = e.target.closest('img');
+      if(!img) return;
+      const full = img.dataset.full || img.src;
+      lbImg.src = full;
+      lbImg.alt = img.alt || '';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden','false');
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden','true');
+      lbImg.src = '';
+    });
+
+    // fechar com ESC
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeBtn.click(); });
+  </script>
+</body>
+</html>
